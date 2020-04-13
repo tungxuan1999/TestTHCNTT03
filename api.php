@@ -42,21 +42,21 @@ class api extends restful_api {
             {
                 $x1 = null;
                 $x2 = null;
-                $data = "Phương trình vô nghiệm";
+                $data = "Phuong trinh vo nghiem";
                 return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
             }
             elseif($denta==0)
             {
                 $x1 = (double) round(-$b/(2*$a),2);
                 $x2 = (double) round(-$b/(2*$a),2);
-                $data = "Phương trình nghiệm kép";
+                $data = "Phuong trinh co nghiem kep";
                 return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
             }
             elseif ($denta>0)
             {
                 $x1 = (double) round((-$b-sqrt($denta))/(2*$a),2);
                 $x2 = (double) round((-$b+sqrt($denta))/(2*$a),2);
-                $data = "Phương trình 2 nghiệm phân biệt";
+                $data = "Phuong trinh vo nghiem";
                 return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
             }
         }
@@ -77,10 +77,10 @@ class api extends restful_api {
         {
             $x = (int)$params[0];
             if ($x % 400 == 0 || $x % 4 == 0 && $x % 100 != 0) {
-                $data = array("status" => true, "data" => array("result" => "Năm " . $x . " là năm nhuận"));
+                $data = array("status" => true, "data" => array("result" => "Nam " . $x . " la nam nhuan"));
 
             } else {
-                $data = array("status" => true, "data" => array("result" => "Năm " . $x . " không phải là năm nhuận"));
+                $data = array("status" => true, "data" => array("result" => "Nam " . $x . " khong phai la nam nhuan"));
             }
             return $data;
         }
