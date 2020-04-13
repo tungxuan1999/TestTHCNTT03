@@ -1,3 +1,23 @@
+  <script>
+    function getLinkJSONpt2() {
+        var a,b,c;
+        a = document.getElementById("inputa").value;
+        b = document.getElementById("inputb").value;
+        c = document.getElementById("inputc").value;
+        window.open("api.php/checkptbac2/"+a+"/"+b+"/"+c);
+    }
+    function getLinkJSONyear() {
+        var a;
+        a = document.getElementById("inputyear").value;
+        window.open("api.php/checkyear/"+a);
+    }
+    function getData()
+    {
+        document.getElementById("txt_apijsonpt2").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkptbac2/a/b/c";
+        document.getElementById("txt_apijsonyear").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkyear/year";
+    }
+</script>
+
 <!DOCTYPE html>
 <html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
 <html>
@@ -27,24 +47,5 @@
 </form>
 <h3>Api json pt2: </h3><h4 id="txt_apijsonyear"></h4>
 <script>getData();</script>
-  <script>
-    function getLinkJSONpt2() {
-        var a,b,c;
-        a = document.getElementById("inputa").value;
-        b = document.getElementById("inputb").value;
-        c = document.getElementById("inputc").value;
-        window.open("api.php/checkptbac2/"+a+"/"+b+"/"+c);
-    }
-    function getLinkJSONyear() {
-        var a;
-        a = document.getElementById("inputyear").value;
-        window.open("api.php/checkyear/"+a);
-    }
-    function getData()
-    {
-        document.getElementById("txt_apijsonpt2").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkptbac2/a/b/c";
-        document.getElementById("txt_apijsonyear").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkyear/year";
-    }
-</script>
 </body>
 </html>
